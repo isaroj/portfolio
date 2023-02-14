@@ -8,8 +8,16 @@ import vue from "../assets/experience/vue.png";
 import github from "../assets/experience/github.png";
 import tailwind from "../assets/experience/tailwind.png";
 
+
+type Exp = {
+  id: number,
+  src: string,
+  title: string,
+  style: string,
+};
+
 const Experience = () => {
-  const techs = [
+  const techs :Exp[] = [
     {
       id: 1,
       src: html,
@@ -68,7 +76,7 @@ const Experience = () => {
 
   return (
     <div
-      name="experience"
+      id="experience"
       className="bg-gradient-to-b from-gray-800 to-black w-full h-full"
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">

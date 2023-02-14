@@ -2,7 +2,12 @@ import { FaBars, FaTimes } from "react-icons/fa"
 import { useState } from "react"
 import { Link } from "react-scroll"
 
-const links = [
+type LinkType = {
+  id: number,
+  name: string
+}
+
+const links:LinkType[] = [
   {
     id: 1,
     name: "home",

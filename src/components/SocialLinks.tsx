@@ -2,8 +2,16 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 
-const SocialLinks = () => {
-  const links = [
+type Social = {
+  id: number,
+  child: any,
+  href: string,
+  style?: string,
+  download?: boolean
+}
+
+const SocialLinks  = () => {
+  const links:Social[] = [
     {
       id: 1,
       child: (
