@@ -1,5 +1,6 @@
-import { FaBars, FaTimes } from "react-icons/fa";
-import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa"
+import { useState } from "react"
+import { Link } from "react-scroll"
 
 const links = [
   {
@@ -28,28 +29,30 @@ const NavBar = () => {
   const [isHamburgerOpened, setIsHamburgerOpened] = useState(false);
 
   return (
-    <div className="bg-black text-white flex justify-between items-center w-full h-20 fixed">
+    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black ">
       <div>
-        <h1 className="text-4xl font-signature px-3">Saroj</h1>
+        <h1 className="text-5xl font-signature ml-2">Saroj</h1>
       </div>
       <ul className="hidden md:flex">
         {links.map((link) => (
           <li
             key={link.id}
-            className="capitalize px-4 text-gray-500 hover:scale-105 hover:text-gray-100 cursor-pointer font-medium duration-300"
+            className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200 hover:text-white"
           >
-            {link.name}
+            <Link to={link.name} smooth={true} duration={500}>
+              {link.name}
+            </Link>
           </li>
         ))}
       </ul>
       <div
-        className="text-gray-500 cursor-pointer pr-4 md:hidden"
+        className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
         onClick={() => setIsHamburgerOpened(!isHamburgerOpened)}
       >
         {!isHamburgerOpened ? <FaBars size={30} /> : <FaTimes size={30} />}
       </div>
      {
-        isHamburgerOpened && ( <ul className="flex flex-col justify-center items-center absolute top-20 left-0 w-full h-screen text-gray-500 bg-gradient-to-b from-black to-gray-800">
+        isHamburgerOpened && ( <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
         {links.map((link) => (
           <li
             key={link.id}
