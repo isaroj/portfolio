@@ -1,25 +1,24 @@
-import React from "react";
 import heroImage from "../assets/heroImage.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-// import { Link } from "react-scroll";
+import { Link } from "react-scroll";
 
 const Home = () => {
   return (
     <div
       name="home"
-      className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800"
+      className="h-full w-full md:h-screen bg-gradient-to-b from-black via-black to-gray-800"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full">
-          <h2 className="text-4xl sm:text-7xl font-bold text-white">
-            I'm a Front End Developer
+          <h2 className="text-4xl md:text-7xl font-bold text-white">
+            Hi, I'm a Front End Developer 
           </h2>
-          <p className="text-gray-500 py-4 max-w-md">
-            Experienced React.JS / Front-end / UI Developer having 2-year of experience working on various front-end technologies through real-life projects starting from the web to mobile platforms like Javascript, Typescript, React.js, Vue, Redux, RTK, Tailwind etc.
+          <p className="text-gray-400 py-4 max-w-md">
+            I can do much more thing than centering a div or adding red colors to the buttons. Just kidding. My two close friends are console.log('bla bla bla') & border: '1px solid red'. You can contact me using below form. Download my resume by clicking the bottom left icon from icons-tray to know more (for this use webview).
           </p>
 
           <div>
-            <a
+            <Link
               to="portfolio"
               smooth
               duration={500}
@@ -29,7 +28,7 @@ const Home = () => {
               <span className="group-hover:rotate-90 duration-300">
                 <MdOutlineKeyboardArrowRight size={25} className="ml-1" />
               </span>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -37,7 +36,7 @@ const Home = () => {
           <img
             src={heroImage}
             alt="my profile"
-            className="rounded-2xl mx-auto w-2/3 md:w-full"
+            className="rounded-2xl mx-auto w-2/3 md:w-full my-10"
           />
         </div>
       </div>
