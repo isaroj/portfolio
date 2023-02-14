@@ -36,7 +36,7 @@ const NavBar = () => {
   return (
     <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black ">
       <div>
-        <h1 className="text-5xl font-signature ml-2">Saroj</h1>
+        <a href="/"><h1 className="text-5xl font-signature ml-2 cursor-pointer">Saroj</h1></a>
       </div>
       <ul className="hidden md:flex">
         {links.map((link) => (
