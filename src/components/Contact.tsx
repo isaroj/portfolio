@@ -1,4 +1,5 @@
-const Contact = () => {
+const Contact = ({isHamburgerOpened} : {isHamburgerOpened:boolean}) => {
+  if (isHamburgerOpened) return null
   return (
     <div
       id="contact"

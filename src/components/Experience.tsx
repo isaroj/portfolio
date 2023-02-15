@@ -16,7 +16,7 @@ type Exp = {
   style: string,
 };
 
-const Experience = () => {
+const Experience = ({isHamburgerOpened} : {isHamburgerOpened:boolean}) => {
   const techs :Exp[] = [
     {
       id: 1,
@@ -73,7 +73,7 @@ const Experience = () => {
       style: "shadow-purple-400",
     },
   ];
-
+ if(isHamburgerOpened) return null
   return (
     <div
       id="experience"

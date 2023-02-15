@@ -1,5 +1,6 @@
 
-const About = () => {
+const About = ({isHamburgerOpened} : {isHamburgerOpened:boolean}) => {
+  if (isHamburgerOpened) return null
   return (
     <div
       id="about"

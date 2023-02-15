@@ -8,7 +8,8 @@ type Portfolio = {
       code: string,
       demo: string
 }
-const Portfolio = () => {
+const Portfolio = ({isHamburgerOpened} : {isHamburgerOpened:boolean}) => {
+  if(isHamburgerOpened) return null
   const portfolios:Portfolio[] = [
     {
       id: 1,

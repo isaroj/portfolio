@@ -5,18 +5,22 @@ import Portfolio from "./components/Portfolio"
 import Experience from "./components/Experience"
 import Contact from "./components/Contact"
 import SocialLinks from "./components/SocialLinks"
+import { useState } from "react"
+
+
 
 function App() {
+  const [isHamburgerOpened, setIsHamburgerOpened] = useState<boolean>(false);
 
   return (
     <div>
-      <NavBar />
-      <Home />
-      <About />
-      <Portfolio />
-      <Experience />
-      <Contact />
-      <SocialLinks />
+      <NavBar isHamburgerOpened={isHamburgerOpened} setIsHamburgerOpened={setIsHamburgerOpened}/>
+      <Home isHamburgerOpened={isHamburgerOpened} />
+      <About isHamburgerOpened={isHamburgerOpened}/>
+      <Portfolio isHamburgerOpened={isHamburgerOpened}/>
+      <Experience isHamburgerOpened={isHamburgerOpened}/>
+      <Contact isHamburgerOpened={isHamburgerOpened}/>
+      <SocialLinks isHamburgerOpened={isHamburgerOpened}/>
     </div>
   )
 }

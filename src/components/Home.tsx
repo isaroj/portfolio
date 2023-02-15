@@ -1,8 +1,9 @@
 import heroImage from "../assets/heroImage.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 
-const Home = () => {
+const Home = ({isHamburgerOpened} : {isHamburgerOpened:boolean}) => {
+  if (isHamburgerOpened) return null
   return (
     <div
       id="home"
@@ -14,21 +15,19 @@ const Home = () => {
             Hi, I'm a Front End Developer 
           </h2>
           <p className="text-gray-400 py-4 max-w-md">
-            I can do much more thing than centering a div or adding red colors to the buttons. Just kidding. My two close friends are console.log('bla bla bla') & border: '1px solid red'. You can contact me using below form. Download my resume by clicking the bottom left icon from icons-tray to know more (for this use webview).
+            I can do much more thing than centering a div or adding red color to the buttons. Just kidding. My two close friends are console.log('bla bla bla') & border: '1px solid red'. You can contact me using below form. Download my resume by clicking the bottom left icon from icons-tray to know more (for this use webview).
           </p>
 
           <div>
-            <Link
-              to="portfolio"
-              smooth
-              duration={500}
+            <a
+              href="#portfolio"
               className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
             >
               Portfolio
               <span className="group-hover:rotate-90 duration-300">
                 <MdOutlineKeyboardArrowRight size={25} className="ml-1" />
               </span>
-            </Link>
+            </a>
           </div>
         </div>
 
