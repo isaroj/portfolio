@@ -20,7 +20,7 @@ const About = ({isHamburgerOpened} : {isHamburgerOpened:boolean}) => {
         <br />
 
         <p className="text-xl">
-          Currently I am working with a US based public giant on a financial lead geneartion project, where we handle large volume of data on the UI side very efficiently with the help our own built in custom components. I'm the part of that team that do RnD to develop more such reusable UI comps that help user to get insight from the data.  
+         Currently, I am working with a US-based public giant on a financial lead generation project, where we handle large volumes of data on the UI side very efficiently with the help of our own built-in custom components. I'm part of a team that does RnD to develop more such reusable UI comps that help users to get insight from the data.  
         </p>
       </div>
     </div>
