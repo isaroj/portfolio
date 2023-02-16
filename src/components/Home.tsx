@@ -15,7 +15,7 @@ const Home = ({isHamburgerOpened} : {isHamburgerOpened:boolean}) => {
             Hi, I'm a Front End Developer 
           </h2>
           <p className="text-gray-400 py-4 max-w-md">
-            I can do much more thing than centering a div or adding red color to the buttons. Just kidding. My two close friends are console.log('bla bla bla') & border: '1px solid red'. You can contact me using below form. Download my resume by clicking the bottom left icon from icons-tray to know more (for this use webview).
+            I can do much more thing than centering a div or adding red color to the buttons. Just kidding. My two close friends are console.log('bla bla bla') & border: '1px solid red'. You can contact me using below form.
           </p>
 
           <div>
