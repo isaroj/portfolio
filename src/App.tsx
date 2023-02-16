@@ -20,7 +20,7 @@ function App() {
       <Portfolio isHamburgerOpened={isHamburgerOpened}/>
       <Experience isHamburgerOpened={isHamburgerOpened}/>
       <Contact isHamburgerOpened={isHamburgerOpened}/>
-      <SocialLinks isHamburgerOpened={isHamburgerOpened}/>
+      <SocialLinks />
     </div>
   )
 }
