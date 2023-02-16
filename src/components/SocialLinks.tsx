@@ -10,8 +10,7 @@ type Social = {
   download?: boolean
 }
 
-const SocialLinks  = ({isHamburgerOpened} : {isHamburgerOpened:boolean}) => {
-  if(isHamburgerOpened) return null
+const SocialLinks  = () => {
   const links:Social[] = [
     {
       id: 1,
@@ -55,7 +54,7 @@ const SocialLinks  = ({isHamburgerOpened} : {isHamburgerOpened:boolean}) => {
   ];
 
   return (
-    <div className="hidden :flex flex-col top-[35%] left-0 fixed">
+    <div className="hidden md:flex flex-col top-[35%] left-0 fixed">
       <ul>
         {links.map(({ id, child, href, style, download }) => (
           <li
